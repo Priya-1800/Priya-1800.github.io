@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Priya Thakur – AI Engineer</title>
+<meta name="description" content="Portfolio of Priya Thakur, AI Engineer: LLM, RAG, speech and vision systems.">
+<style>
+:root{--bg:#fafaf8;--fg:#1b1f24;--muted:#5b6470;--card:#fff;--line:#e4e6ea;--accent:#1f4e8c;--chip:#eef2f8}
+@media (prefers-color-scheme:dark){:root{--bg:#0f1318;--fg:#e8eaed;--muted:#9aa4b2;--card:#171c23;--line:#2a313b;--accent:#7fb0ff;--chip:#1f2630}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Hiragino Sans",sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
+nav b{margin-right:auto}
+nav a{color:var(--muted);font-size:14px}
+.hero{display:flex;gap:28px;align-items:center;padding:56px 0 36px;flex-wrap:wrap}
+.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--line);background:var(--chip)}
+.hero h1{margin:0;font-size:2.3rem;line-height:1.2}
+.role{color:var(--accent);font-weight:600;margin:.2rem 0 .6rem}
+.hero p{margin:.3rem 0;max-width:560px}
+.jp{color:var(--muted);font-size:.95rem}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
+.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--accent);font-size:.95rem}
+.btn.fill{background:var(--accent);color:var(--bg)}
+.btn:hover{text-decoration:none;opacity:.88}
+section{padding:34px 0;border-top:1px solid var(--line)}
+h2{margin:0 0 18px;font-size:1.4rem}
+h3{margin:0 0 4px;font-size:1.05rem}
+.sub{color:var(--muted);font-size:.9rem;margin:0 0 8px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
+.card p{margin:.4rem 0}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.tags span,.chips span{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:.8rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.skills dt{font-weight:600;margin-top:14px}.skills dd{margin:6px 0 0}
+.badge{display:inline-block;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+ul{padding-left:1.2rem;margin:.4rem 0}li{margin:.25rem 0}
+footer{padding:30px 0 50px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+@media (max-width:560px){.hero{padding-top:32px}.hero h1{font-size:1.9rem}}
+</style>
+</head>
+<body>
+<nav><div class="wrap"><b>Priya Thakur</b><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></div></nav>
+
+<main class="wrap">
+<header class="hero">
+  <img class="avatar" src="photo.jpg" alt="Priya Thakur" onerror="this.style.visibility='hidden'">
+  <div>
+    <h1>Priya Thakur</h1>
+    <div class="role">AI Engineer</div>
+    <p>I build AI systems that actually run: LLM and RAG pipelines, speech and audio models, and computer vision, delivered with FastAPI backends and real-time streaming.</p>
+    <p class="jp">電子・通信工学（B.E.）卒業。AIエンジニアとして日本での就職を目指しています。</p>
+    <div class="btns">
+      <a class="btn fill" href="#projects">View projects</a>
+      <a class="btn" href="https://github.com/Priya-1800">GitHub</a>
+      <a class="btn" href="https://www.linkedin.com/in/priya-thakur-8701a1272">LinkedIn</a>
+      <a class="btn" href="mailto:priyathakur18227@gmail.com">Email</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About</h2>
+  <p>I graduated in 2026 with a B.E. in Electronics &amp; Telecommunication (Honors in AI/ML) from Trinity Academy of Engineering, SPPU, Pune, with a 9.28 final-year SGPA. During a six-month software engineering internship at Appolo Computers I worked in a five-member team on speaker verification, acoustic classification and document intelligence. I also led a four-person team on my final-year project and presented the research at ImCReTE 2026.</p>
+  <p>I like taking a problem from idea to a working system: comparing approaches with numbers, then making the chosen one reliable enough to run on long jobs and real traffic. I am based in Pune, India, and I am looking for AI engineering roles in Japan.</p>
+</section>
+
+<section id="skills">
+  <h2>Skills</h2>
+  <dl class="skills">
+    <dt>AI &amp; LLM</dt><dd class="chips"><span>LLMs</span><span>Prompt Engineering</span><span>RAG</span><span>LangChain</span><span>FAISS</span><span>Gemini API &amp; Vision</span><span>HuggingFace</span><span>Agentic AI</span></dd>
+    <dt>Speech &amp; Vision</dt><dd class="chips"><span>Pyannote.audio</span><span>SpeechBrain</span><span>YAMNet</span><span>OpenCV</span><span>FaceNet</span><span>SVM</span></dd>
+    <dt>Backend &amp; Web</dt><dd class="chips"><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>WebSockets</span><span>NDJSON streaming</span><span>Asyncio</span><span>React</span><span>JavaScript</span><span>SQL / SQLite</span></dd>
+    <dt>Tools</dt><dd class="chips"><span>Git &amp; GitHub</span><span>Postman</span><span>Linux / Bash</span></dd>
+  </dl>
+</section>
+
+<section id="projects">
+  <h2>Projects</h2>
+  <p class="sub">Internship projects · Appolo Computers (Jan–Jul 2026)</p>
+  <div class="grid">
+    <article class="card">
+      <span class="badge">Internship</span>
+      <h3>AI Speaker Verification System</h3>
+      <p>Full-stack app that finds and verifies target speakers in meetings, interviews and calls. FastAPI backend with Pyannote.audio diarization and SpeechBrain ECAPA-TDNN embeddings; React and WaveSurfer.js frontend with live NDJSON progress streaming.</p>
+      <ul><li>Benchmarked thresholds: 100% precision at 0.90, 100% recall at 0.25</li><li>Mapped matches to exact start, end and duration timestamps</li></ul>
+      <div class="tags"><span>FastAPI</span><span>Pyannote</span><span>SpeechBrain</span><span>React</span><span>NDJSON</span></div>
+    </article>
+    <article class="card">
+      <span class="badge">Internship</span>
+      <h3>Acoustic Environment Monitoring &amp; Classification</h3>
+      <p>Backend built on Google’s YAMNet that turns raw audio into structured JSON/CSV (category, confidence, timestamp) for noise monitoring, machine-fault detection and automated security alerts.</p>
+      <ul><li>Batch classification at 362× real time</li></ul>
+      <div class="tags"><span>Python</span><span>YAMNet</span><span>JSON / CSV</span></div>
+    </article>
+    <article class="card">
+      <span class="badge">Internship</span>
+      <h3>Enterprise PDF Extraction &amp; Similarity Pipeline</h3>
+      <p>Vision-based OCR pipeline: PyMuPDF renders pages at 300 DPI, Gemini 2.5 Flash Vision extracts structured JSON under a strict schema at temperature 0. Auto-resume caching and HTTP 429 backoff keep long runs alive.</p>
+      <ul><li>Compared cross-encoder, knowledge-graph and vector approaches, then chose FAISS with LangChain chunking and all-MiniLM-L6-v2</li></ul>
+      <div class="tags"><span>Gemini Vision</span><span>FAISS</span><span>LangChain</span><span>PyMuPDF</span></div>
+    </article>
+  </div>
+
+  <p class="sub" style="margin-top:28px">Academic projects · Trinity Academy of Engineering</p>
+  <div class="grid">
+    <article class="card">
+      <span class="badge">Final-year capstone · team lead</span>
+      <h3>Vani.ai: Real-Time Multilingual Transcription</h3>
+      <p>Raspberry Pi captures audio over Bluetooth and a FastAPI backend streams it over full-duplex WebSockets to the Speechmatics API for low-latency multilingual transcription. I led a team of four and published the work at ImCReTE 2026.</p>
+      <div class="tags"><span>FastAPI</span><span>WebSockets</span><span>Raspberry Pi</span><span>SQLite</span></div>
+      <p><a href="https://github.com/Priya-1800/RealTime_Multilingual_Transcriber">View on GitHub →</a></p>
+    </article>
+    <article class="card">
+      <span class="badge">Solo project</span>
+      <h3>Smart Face Attendance System</h3>
+      <p>Desktop app using FaceNet embeddings and an SVM classifier with role-based access. Prevents proxy attendance and sends daily absence reports to administrators over WhatsApp.</p>
+      <div class="tags"><span>OpenCV</span><span>FaceNet</span><span>SVM</span><span>Tkinter</span></div>
+    </article>
+    <article class="card">
+      <span class="badge">Team of 3 · embedded &amp; backend</span>
+      <h3>ENCORE Management System</h3>
+      <p>Biometric event-access platform: ESP32 fingerprint sensor with C++ firmware, encrypted HTTP to a REST API, and an admin dashboard. Cut gate verification to under one second.</p>
+      <div class="tags"><span>ESP32</span><span>C++</span><span>REST API</span><span>JavaScript</span></div>
+      <p><a href="https://github.com/Priya-1800/Encore-Management">View on GitHub →</a></p>
+    </article>
+  </div>
+</section>
+
+<section id="achievements">
+  <h2>Achievements &amp; Certifications</h2>
+  <div class="grid">
+    <div class="card"><h3>Achievements</h3><ul>
+      <li>Research paper on Vani.ai presented and published at ImCReTE 2026</li>
+      <li>Avishkar Research Competition: zonal level</li>
+      <li>OfGrid 1.0 (CDC Hackathon): rounds 1 and 2</li>
+      <li>Impetus &amp; Concepts 2026 (PICT): project team</li>
+      <li>Smart India Hackathon 2024: participant</li></ul></div>
+    <div class="card"><h3>Certifications</h3><ul>
+      <li>IBM SkillsBuild: Make Agentic AI Work for You (Oct 2026)</li>
+      <li>IBM: Retrieval-Augmented Generation for Enhanced AI Outputs</li>
+      <li>Google AI Essentials</li>
+      <li>Hugging Face Agents</li>
+      <li>JLPT N5 (Japanese)</li></ul></div>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Open to AI engineering roles and project-based work. The best way to reach me is email.</p>
+  <p><a href="mailto:priyathakur18227@gmail.com">priyathakur18227@gmail.com</a> · <a href="https://github.com/Priya-1800">GitHub</a> · <a href="https://www.linkedin.com/in/priya-thakur-8701a1272">LinkedIn</a></p>
+</section>
+</main>
+<footer><div class="wrap">© 2026 Priya Thakur · Pune, India</div></footer>
+</body>
+</html>
