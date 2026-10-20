@@ -4,158 +4,189 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Priya Thakur – AI Engineer</title>
-<meta name="description" content="Portfolio of Priya Thakur, AI Engineer: LLM, RAG, speech and vision systems.">
+<meta name="description" content="Portfolio of Priya Thakur, AI Engineer: LLM agents, RAG, speech and vision systems.">
 <style>
-:root{--bg:#fafaf8;--fg:#1b1f24;--muted:#5b6470;--card:#fff;--line:#e4e6ea;--accent:#1f4e8c;--chip:#eef2f8}
-@media (prefers-color-scheme:dark){:root{--bg:#0f1318;--fg:#e8eaed;--muted:#9aa4b2;--card:#171c23;--line:#2a313b;--accent:#7fb0ff;--chip:#1f2630}}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP","Hiragino Sans",sans-serif}
-a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;gap:18px;align-items:center;flex-wrap:wrap;padding-top:12px;padding-bottom:12px}
-nav b{margin-right:auto}
-nav a{color:var(--muted);font-size:14px}
-.hero{display:flex;gap:28px;align-items:center;padding:56px 0 36px;flex-wrap:wrap}
-.avatar{width:150px;height:150px;border-radius:50%;object-fit:cover;border:3px solid var(--line);background:var(--chip)}
-.hero h1{margin:0;font-size:2.3rem;line-height:1.2}
-.role{color:var(--accent);font-weight:600;margin:.2rem 0 .6rem}
-.hero p{margin:.3rem 0;max-width:560px}
-.jp{color:var(--muted);font-size:.95rem}
-.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}
-.btn{padding:8px 16px;border-radius:8px;border:1px solid var(--accent);font-size:.95rem}
-.btn.fill{background:var(--accent);color:var(--bg)}
-.btn:hover{text-decoration:none;opacity:.88}
-section{padding:34px 0;border-top:1px solid var(--line)}
-h2{margin:0 0 18px;font-size:1.4rem}
+:root{--bg:#07090d;--fg:#e9edf3;--mut:#8f9aab;--line:rgba(255,255,255,.12);--a:#7fd1ff;--b:#b69cff;--card:rgba(12,16,24,.62)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans JP",sans-serif}
+a{color:var(--a);text-decoration:none}a:hover{text-decoration:underline}
+#gl{position:fixed;inset:0;width:100%;height:100%;z-index:0}
+header{position:fixed;top:0;left:0;right:0;z-index:5;display:flex;justify-content:space-between;align-items:center;padding:16px 24px;font-size:13px;letter-spacing:.08em;text-transform:uppercase;background:linear-gradient(var(--bg),transparent)}
+header nav{display:flex;gap:18px}header nav a{color:var(--mut)}
+#count{position:fixed;left:24px;bottom:22px;z-index:5;font:13px ui-monospace,Menlo,Consolas,monospace;color:var(--mut)}
+#count b{color:var(--fg)}
+main{position:relative;z-index:2}
+section{min-height:100vh;display:flex;flex-direction:column;justify-content:center;padding:96px 24px;max-width:1100px;margin:0 auto}
+.k{font:12px ui-monospace,Menlo,Consolas,monospace;color:var(--a);letter-spacing:.14em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(2.6rem,7vw,5rem);line-height:1.05;margin:0}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);line-height:1.15;margin:0 0 18px;max-width:560px}
 h3{margin:0 0 4px;font-size:1.05rem}
-.sub{color:var(--muted);font-size:.9rem;margin:0 0 8px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
-.card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:18px}
-.card p{margin:.4rem 0}
-.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
-.tags span,.chips span{background:var(--chip);border-radius:999px;padding:2px 10px;font-size:.8rem}
-.chips{display:flex;flex-wrap:wrap;gap:8px}
-.skills dt{font-weight:600;margin-top:14px}.skills dd{margin:6px 0 0}
-.badge{display:inline-block;font-size:.72rem;letter-spacing:.04em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
-ul{padding-left:1.2rem;margin:.4rem 0}li{margin:.25rem 0}
-footer{padding:30px 0 50px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
-@media (max-width:560px){.hero{padding-top:32px}.hero h1{font-size:1.9rem}}
+.grad{background:linear-gradient(90deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{max-width:520px;color:#cfd6e2}.jp{color:var(--mut);font-size:.95rem}
+.txt{max-width:520px}
+.btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+.btn{padding:9px 18px;border:1px solid var(--a);border-radius:999px;font-size:.92rem;color:var(--fg)}
+.btn.f{background:var(--a);color:#06101a}.btn:hover{text-decoration:none;opacity:.85}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(290px,1fr));gap:16px}
+.card{background:var(--card);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border:1px solid var(--line);border-radius:14px;padding:18px}
+.card p{margin:.35rem 0;font-size:.95rem;color:#cfd6e2}
+.tag{font:11px ui-monospace,Menlo,Consolas,monospace;color:var(--b);letter-spacing:.1em;text-transform:uppercase}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}.tags span,.chips span{border:1px solid var(--line);border-radius:999px;padding:2px 10px;font-size:.8rem;color:#cfd6e2}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 14px}
+ul{padding-left:1.1rem;margin:.4rem 0}li{margin:.2rem 0;font-size:.93rem;color:#cfd6e2}
+.sub{color:var(--mut);margin:20px 0 8px;font-size:.9rem}
+footer{position:relative;z-index:2;text-align:center;color:var(--mut);font-size:.85rem;padding:30px}
+#ld{position:fixed;inset:0;z-index:20;background:var(--bg);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .8s,visibility .8s}
+#ld.off{opacity:0;visibility:hidden}
+#ld .n{font:14px ui-monospace,Menlo,Consolas,monospace;letter-spacing:.3em;color:var(--mut)}
+#ld button{opacity:0;pointer-events:none;background:none;color:var(--fg);border:1px solid var(--a);border-radius:999px;padding:10px 34px;font-size:1rem;letter-spacing:.2em;cursor:pointer;transition:opacity .5s}
+#ld.rdy button{opacity:1;pointer-events:auto}
+@media (max-width:800px){header nav{display:none}section{padding:84px 18px}}
 </style>
 </head>
 <body>
-<nav><div class="wrap"><b>Priya Thakur</b><a href="#about">About</a><a href="#skills">Skills</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a href="#contact">Contact</a></div></nav>
+<div id="ld"><div class="n" id="ldn">LOADING 00</div><button id="enter">ENTER</button></div>
+<canvas id="gl"></canvas>
+<header><b>Priya Thakur</b><nav><a href="#s1">Home</a><a href="#s4">Projects</a><a href="#s5">Building</a><a href="#s7">Contact</a></nav></header>
+<div id="count"><b id="ci">01</b> / 07 &nbsp; <span id="cl">Hello</span></div>
 
-<main class="wrap">
-<header class="hero">
-  <img class="avatar" src="photo.jpg" alt="Priya Thakur" onerror="this.style.visibility='hidden'">
-  <div>
-    <h1>Priya Thakur</h1>
-    <div class="role">AI Engineer</div>
-    <p>I build AI systems that actually run: LLM and RAG pipelines, speech and audio models, and computer vision, delivered with FastAPI backends and real-time streaming.</p>
-    <p class="jp">電子・通信工学（B.E.）卒業。AIエンジニアとして日本での就職を目指しています。</p>
-    <div class="btns">
-      <a class="btn fill" href="#projects">View projects</a>
-      <a class="btn" href="https://github.com/Priya-1800">GitHub</a>
-      <a class="btn" href="https://www.linkedin.com/in/priya-thakur-8701a1272">LinkedIn</a>
-      <a class="btn" href="mailto:priyathakur18227@gmail.com">Email</a>
-    </div>
+<main>
+<section id="s1" data-l="Hello">
+  <div class="k">AI Engineer · Pune, India</div>
+  <h1>Priya<br><span class="grad">Thakur</span></h1>
+  <p class="lead">I build AI systems that actually run: LLM agents, RAG pipelines, speech and vision models, shipped behind FastAPI with real-time streaming.</p>
+  <p class="jp">電子・通信工学（B.E.）卒業。AIエンジニアとして日本での就職を目指しています。</p>
+  <div class="btns"><a class="btn f" href="#s4">View projects</a><a class="btn" href="https://github.com/Priya-1800">GitHub</a><a class="btn" href="https://www.linkedin.com/in/priya-thakur-8701a1272">LinkedIn</a><a class="btn" href="mailto:priyathakur18227@gmail.com">Email</a></div>
+</section>
+
+<section id="s2" data-l="About">
+  <div class="k">01 · About</div>
+  <h2 class="sc">Ideas into systems that run.</h2>
+  <p class="txt">I graduated in 2026 with a B.E. in Electronics &amp; Telecommunication (Honors in AI/ML) from Trinity Academy of Engineering, SPPU, Pune, with a 9.28 final-year SGPA. In a six-month internship at Appolo Computers I worked in a five-member team on speaker verification, acoustic classification and document intelligence. I led a four-person team on my final-year project and presented the research at ImCReTE 2026.</p>
+  <p class="txt">I compare approaches with numbers, then make the chosen one reliable enough for long jobs and real traffic. I’m looking for AI engineering roles in Japan.</p>
+</section>
+
+<section id="s3" data-l="Skills">
+  <div class="k">02 · Skills</div>
+  <h2 class="sc">The toolbox.</h2>
+  <div class="card txt">
+    <h3>AI &amp; LLM</h3><div class="chips"><span>LLMs</span><span>Prompt Engineering</span><span>RAG</span><span>LangChain</span><span>FAISS</span><span>Gemini API &amp; Vision</span><span>HuggingFace</span><span>Agentic AI</span></div>
+    <h3>Speech &amp; Vision</h3><div class="chips"><span>Pyannote.audio</span><span>SpeechBrain</span><span>YAMNet</span><span>OpenCV</span><span>FaceNet</span><span>SVM</span></div>
+    <h3>Backend &amp; Web</h3><div class="chips"><span>Python</span><span>FastAPI</span><span>REST</span><span>WebSockets</span><span>NDJSON</span><span>Asyncio</span><span>React</span><span>JavaScript</span><span>SQL</span></div>
+    <h3>Tools</h3><div class="chips" style="margin-bottom:0"><span>Git &amp; GitHub</span><span>Postman</span><span>Linux / Bash</span></div>
   </div>
-</header>
-
-<section id="about">
-  <h2>About</h2>
-  <p>I graduated in 2026 with a B.E. in Electronics &amp; Telecommunication (Honors in AI/ML) from Trinity Academy of Engineering, SPPU, Pune, with a 9.28 final-year SGPA. During a six-month software engineering internship at Appolo Computers I worked in a five-member team on speaker verification, acoustic classification and document intelligence. I also led a four-person team on my final-year project and presented the research at ImCReTE 2026.</p>
-  <p>I like taking a problem from idea to a working system: comparing approaches with numbers, then making the chosen one reliable enough to run on long jobs and real traffic. I am based in Pune, India, and I am looking for AI engineering roles in Japan.</p>
 </section>
 
-<section id="skills">
-  <h2>Skills</h2>
-  <dl class="skills">
-    <dt>AI &amp; LLM</dt><dd class="chips"><span>LLMs</span><span>Prompt Engineering</span><span>RAG</span><span>LangChain</span><span>FAISS</span><span>Gemini API &amp; Vision</span><span>HuggingFace</span><span>Agentic AI</span></dd>
-    <dt>Speech &amp; Vision</dt><dd class="chips"><span>Pyannote.audio</span><span>SpeechBrain</span><span>YAMNet</span><span>OpenCV</span><span>FaceNet</span><span>SVM</span></dd>
-    <dt>Backend &amp; Web</dt><dd class="chips"><span>Python</span><span>FastAPI</span><span>REST APIs</span><span>WebSockets</span><span>NDJSON streaming</span><span>Asyncio</span><span>React</span><span>JavaScript</span><span>SQL / SQLite</span></dd>
-    <dt>Tools</dt><dd class="chips"><span>Git &amp; GitHub</span><span>Postman</span><span>Linux / Bash</span></dd>
-  </dl>
-</section>
-
-<section id="projects">
-  <h2>Projects</h2>
-  <p class="sub">Internship projects · Appolo Computers (Jan–Jul 2026)</p>
+<section id="s4" data-l="Projects">
+  <div class="k">03 · Projects</div>
+  <h2 class="sc">Things I built.</h2>
+  <p class="sub">Internship · Appolo Computers, Jan–Jul 2026</p>
   <div class="grid">
-    <article class="card">
-      <span class="badge">Internship</span>
-      <h3>AI Speaker Verification System</h3>
-      <p>Full-stack app that finds and verifies target speakers in meetings, interviews and calls. FastAPI backend with Pyannote.audio diarization and SpeechBrain ECAPA-TDNN embeddings; React and WaveSurfer.js frontend with live NDJSON progress streaming.</p>
-      <ul><li>Benchmarked thresholds: 100% precision at 0.90, 100% recall at 0.25</li><li>Mapped matches to exact start, end and duration timestamps</li></ul>
-      <div class="tags"><span>FastAPI</span><span>Pyannote</span><span>SpeechBrain</span><span>React</span><span>NDJSON</span></div>
-    </article>
-    <article class="card">
-      <span class="badge">Internship</span>
-      <h3>Acoustic Environment Monitoring &amp; Classification</h3>
-      <p>Backend built on Google’s YAMNet that turns raw audio into structured JSON/CSV (category, confidence, timestamp) for noise monitoring, machine-fault detection and automated security alerts.</p>
-      <ul><li>Batch classification at 362× real time</li></ul>
-      <div class="tags"><span>Python</span><span>YAMNet</span><span>JSON / CSV</span></div>
-    </article>
-    <article class="card">
-      <span class="badge">Internship</span>
-      <h3>Enterprise PDF Extraction &amp; Similarity Pipeline</h3>
-      <p>Vision-based OCR pipeline: PyMuPDF renders pages at 300 DPI, Gemini 2.5 Flash Vision extracts structured JSON under a strict schema at temperature 0. Auto-resume caching and HTTP 429 backoff keep long runs alive.</p>
-      <ul><li>Compared cross-encoder, knowledge-graph and vector approaches, then chose FAISS with LangChain chunking and all-MiniLM-L6-v2</li></ul>
-      <div class="tags"><span>Gemini Vision</span><span>FAISS</span><span>LangChain</span><span>PyMuPDF</span></div>
-    </article>
+    <article class="card"><span class="tag">Internship</span><h3>AI Speaker Verification System</h3><p>Finds and verifies target speakers in meetings and calls. FastAPI with Pyannote.audio diarization and SpeechBrain ECAPA-TDNN embeddings; React and WaveSurfer.js frontend with live NDJSON progress.</p><ul><li>100% precision at threshold 0.90, 100% recall at 0.25</li></ul><div class="tags"><span>FastAPI</span><span>Pyannote</span><span>SpeechBrain</span><span>React</span></div></article>
+    <article class="card"><span class="tag">Internship</span><h3>Acoustic Monitoring &amp; Classification</h3><p>YAMNet backend turning raw audio into structured JSON/CSV (category, confidence, timestamp) for noise monitoring, fault detection and security alerts.</p><ul><li>Batch classification at 362× real time</li></ul><div class="tags"><span>Python</span><span>YAMNet</span><span>JSON / CSV</span></div></article>
+    <article class="card"><span class="tag">Internship</span><h3>Enterprise PDF Extraction &amp; Similarity</h3><p>PyMuPDF at 300 DPI plus Gemini 2.5 Flash Vision under a strict JSON schema at temperature 0, with auto-resume caching and HTTP 429 backoff.</p><ul><li>Compared cross-encoder, knowledge graph and vectors, then chose FAISS</li></ul><div class="tags"><span>Gemini Vision</span><span>FAISS</span><span>LangChain</span></div></article>
   </div>
-
-  <p class="sub" style="margin-top:28px">Academic projects · Trinity Academy of Engineering</p>
+  <p class="sub">Academic · Trinity Academy of Engineering</p>
   <div class="grid">
-    <article class="card">
-      <span class="badge">Final-year capstone · team lead</span>
-      <h3>Vani.ai: Real-Time Multilingual Transcription</h3>
-      <p>Raspberry Pi captures audio over Bluetooth and a FastAPI backend streams it over full-duplex WebSockets to the Speechmatics API for low-latency multilingual transcription. I led a team of four and published the work at ImCReTE 2026.</p>
-      <div class="tags"><span>FastAPI</span><span>WebSockets</span><span>Raspberry Pi</span><span>SQLite</span></div>
-      <p><a href="https://github.com/Priya-1800/RealTime_Multilingual_Transcriber">View on GitHub →</a></p>
-    </article>
-    <article class="card">
-      <span class="badge">Solo project</span>
-      <h3>Smart Face Attendance System</h3>
-      <p>Desktop app using FaceNet embeddings and an SVM classifier with role-based access. Prevents proxy attendance and sends daily absence reports to administrators over WhatsApp.</p>
-      <div class="tags"><span>OpenCV</span><span>FaceNet</span><span>SVM</span><span>Tkinter</span></div>
-    </article>
-    <article class="card">
-      <span class="badge">Team of 3 · embedded &amp; backend</span>
-      <h3>ENCORE Management System</h3>
-      <p>Biometric event-access platform: ESP32 fingerprint sensor with C++ firmware, encrypted HTTP to a REST API, and an admin dashboard. Cut gate verification to under one second.</p>
-      <div class="tags"><span>ESP32</span><span>C++</span><span>REST API</span><span>JavaScript</span></div>
-      <p><a href="https://github.com/Priya-1800/Encore-Management">View on GitHub →</a></p>
-    </article>
+    <article class="card"><span class="tag">Capstone · team lead</span><h3>Vani.ai: Real-Time Multilingual Captions</h3><p>FastAPI and WebSockets stream presenter audio to Speechmatics with speaker labels and a custom glossary, then broadcast live text to audience rooms. Gemini summaries. Presented at ImCReTE 2026.</p><div class="tags"><span>FastAPI</span><span>WebSockets</span><span>Speechmatics</span><span>Gemini</span></div><p><a href="https://github.com/Priya-1800/Vani.ai">Vani.ai →</a> · <a href="https://github.com/Priya-1800/RealTime_Multilingual_Transcriber">Desktop client →</a></p></article>
+    <article class="card"><span class="tag">Solo project</span><h3>Smart Face Attendance</h3><p>FaceNet embeddings and an SVM classifier with role-based access. Stops proxy attendance and sends daily absence reports over WhatsApp.</p><div class="tags"><span>OpenCV</span><span>FaceNet</span><span>SVM</span></div></article>
+    <article class="card"><span class="tag">Team of 3 · embedded &amp; backend</span><h3>ENCORE Management System</h3><p>Biometric event access: ESP32 fingerprint sensor with C++ firmware, encrypted HTTP to a REST API and an admin dashboard. Gate checks in under a second.</p><div class="tags"><span>ESP32</span><span>C++</span><span>REST</span></div><p><a href="https://github.com/Priya-1800/Encore-Management">GitHub →</a></p></article>
   </div>
 </section>
 
-<section id="achievements">
-  <h2>Achievements &amp; Certifications</h2>
-  <div class="grid">
-    <div class="card"><h3>Achievements</h3><ul>
-      <li>Research paper on Vani.ai presented and published at ImCReTE 2026</li>
-      <li>Avishkar Research Competition: zonal level</li>
-      <li>OfGrid 1.0 (CDC Hackathon): rounds 1 and 2</li>
-      <li>Impetus &amp; Concepts 2026 (PICT): project team</li>
-      <li>Smart India Hackathon 2024: participant</li></ul></div>
-    <div class="card"><h3>Certifications</h3><ul>
-      <li>IBM SkillsBuild: Make Agentic AI Work for You (Oct 2026)</li>
-      <li>IBM: Retrieval-Augmented Generation for Enhanced AI Outputs</li>
-      <li>Google AI Essentials</li>
-      <li>Hugging Face Agents</li>
-      <li>JLPT N5 (Japanese)</li></ul></div>
+<section id="s5" data-l="Building now">
+  <div class="k">04 · In progress</div>
+  <h2 class="sc">Multi-agent meeting assistant.</h2>
+  <div class="card txt">
+    <p>I’m extending Vani.ai with a multi-agent layer for Japanese and English meetings, and learning Docker and cloud deployment along the way.</p>
+    <ul><li>SQLite persistence for meetings and transcripts</li><li>LangGraph agents: cleaner, summarizer, action items, JA↔EN translator, critic</li><li>Q&amp;A over past meetings with FAISS</li><li>Evaluation against a single-prompt baseline</li><li>Docker, CI and a free-tier cloud deployment</li></ul>
+    <p><a href="https://github.com/Priya-1800/Vani.ai">Follow the repo →</a></p>
   </div>
 </section>
 
-<section id="contact">
-  <h2>Contact</h2>
-  <p>Open to AI engineering roles and project-based work. The best way to reach me is email.</p>
-  <p><a href="mailto:priyathakur18227@gmail.com">priyathakur18227@gmail.com</a> · <a href="https://github.com/Priya-1800">GitHub</a> · <a href="https://www.linkedin.com/in/priya-thakur-8701a1272">LinkedIn</a></p>
+<section id="s6" data-l="Highlights">
+  <div class="k">05 · Highlights</div>
+  <h2 class="sc">Papers &amp; credentials.</h2>
+  <div class="grid" style="max-width:700px">
+    <div class="card"><h3>Achievements</h3><ul><li>Vani.ai paper presented and published, ImCReTE 2026</li><li>Avishkar Research Competition: zonal level</li><li>OfGrid 1.0 (CDC Hackathon): rounds 1 and 2</li><li>Impetus &amp; Concepts 2026 (PICT)</li><li>Smart India Hackathon 2024</li></ul></div>
+    <div class="card"><h3>Certifications</h3><ul><li>IBM: Make Agentic AI Work for You (Oct 2026)</li><li>IBM: Retrieval-Augmented Generation</li><li>Google AI Essentials</li><li>Hugging Face Agents</li><li>JLPT N5</li></ul></div>
+  </div>
+</section>
+
+<section id="s7" data-l="Contact">
+  <div class="k">06 · Contact</div>
+  <h2 class="sc">Let’s talk.</h2>
+  <p class="txt">Open to AI engineering roles and project-based work. Email is the best way to reach me.</p>
+  <div class="btns"><a class="btn f" href="mailto:priyathakur18227@gmail.com">priyathakur18227@gmail.com</a><a class="btn" href="https://github.com/Priya-1800">GitHub</a><a class="btn" href="https://www.linkedin.com/in/priya-thakur-8701a1272">LinkedIn</a></div>
 </section>
 </main>
-<footer><div class="wrap">© 2026 Priya Thakur · Pune, India</div></footer>
+<footer>© 2026 Priya Thakur · Pune, India</footer>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from "three";
+const reduce=matchMedia("(prefers-reduced-motion: reduce)").matches, mobile=innerWidth<800;
+const secs=[...document.querySelectorAll("main section")], S=secs.length;
+const ld=document.getElementById("ld"), ldn=document.getElementById("ldn");
+let c=0; const tk=setInterval(()=>{c=Math.min(100,c+4);ldn.textContent="LOADING "+String(c).padStart(2,"0");if(c>=100){clearInterval(tk);ld.classList.add("rdy")}},30);
+document.getElementById("enter").onclick=()=>ld.classList.add("off");
+addEventListener("keydown",e=>{if(e.key==="Enter"&&ld.classList.contains("rdy"))ld.classList.add("off")});
+
+const ch="ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789#%&";
+function scramble(el){const t=el.dataset.t||(el.dataset.t=el.textContent);let f=0;const id=setInterval(()=>{el.textContent=[...t].map((x,i)=>x===" "||i<f/2?x:ch[Math.random()*ch.length|0]).join("");if(++f>t.length*2){el.textContent=t;clearInterval(id)}},28)}
+if(!reduce){const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){scramble(e.target);io.unobserve(e.target)}}),{threshold:.6});document.querySelectorAll(".sc").forEach(h=>io.observe(h))}
+
+let renderer;
+try{renderer=new THREE.WebGLRenderer({canvas:document.getElementById("gl"),antialias:false,alpha:true})}catch(e){renderer=null}
+if(renderer){
+const N=mobile?4500:9000, R=(a=1)=>(Math.random()*2-1)*a;
+const gen=fn=>{const a=new Float32Array(N*3);for(let i=0;i<N;i++){const p=fn(i);a[i*3]=p[0];a[i*3+1]=p[1];a[i*3+2]=p[2]}return a};
+const sphere=()=>{const t=Math.random()*6.2832,p=Math.acos(2*Math.random()-1),r=2.1;return[r*Math.sin(p)*Math.cos(t),r*Math.cos(p),r*Math.sin(p)*Math.sin(t)]};
+const torus=()=>{const u=Math.random()*6.2832,v=Math.random()*6.2832,A=1.7,r=.55;return[(A+r*Math.cos(v))*Math.cos(u),r*Math.sin(v),(A+r*Math.cos(v))*Math.sin(u)]};
+const cube=()=>{const s=1.6,k=Math.random()*3|0,q=[0,0,0];q[k]=(Math.random()<.5?-1:1)*s;q[(k+1)%3]=R(s);q[(k+2)%3]=R(s);return q};
+const wave=i=>{const x=(i/N)*6-3,z=R(.9);return[x,Math.sin(x*2.4)*.9+Math.sin(x*6)*.12+R(.04),z]};
+const cen=[...Array(9)].map(()=>[R(2),R(1.6),R(1.4)]);
+const net=i=>{if(i%4===0){const k=(i/4|0)%9,a=cen[k],b=cen[(k*5+2)%9],t=Math.random();return[a[0]+(b[0]-a[0])*t,a[1]+(b[1]-a[1])*t,a[2]+(b[2]-a[2])*t]}const q=cen[i%9];return[q[0]+R(.3),q[1]+R(.3),q[2]+R(.3)]};
+const helix=i=>{const t=(i/N)*6.2832*4,o=i%2?0:3.1416,y=(i/N)*5-2.5;return[Math.cos(t+o)+R(.05),y,Math.sin(t+o)+R(.05)]};
+const shapes=[sphere,torus,cube,wave,net,helix,sphere].map(f=>gen(f));
+const side=mobile?[0,0,0,0,0,0,0]:[2.1,2.1,2.1,0,2.1,2.1,0], alp=mobile?[.5,.4,.4,.3,.4,.4,.5]:[1,1,1,.35,1,1,.9];
+const pal=[["#7fd1ff","#b69cff"],["#ffb86b","#ff6b9a"],["#6bffb8","#7fd1ff"],["#b69cff","#7fd1ff"],["#7fd1ff","#6bffb8"],["#ffd36b","#ff6b9a"],["#7fd1ff","#b69cff"]].map(p=>p.map(h=>new THREE.Color(h)));
+const delay=new Float32Array(N), seed=new Float32Array(N);for(let i=0;i<N;i++){delay[i]=Math.random();seed[i]=Math.random()}
+const pos=new Float32Array(shapes[0]), geo=new THREE.BufferGeometry();
+const pa=new THREE.BufferAttribute(pos,3);pa.setUsage(THREE.DynamicDrawUsage);geo.setAttribute("position",pa);geo.setAttribute("aSeed",new THREE.BufferAttribute(seed,1));
+const U={uTime:{value:0},uSize:{value:mobile?2.4:2.1},uPixel:{value:1},uMouse:{value:new THREE.Vector2(9,9)},uAsp:{value:1},uC1:{value:new THREE.Color()},uC2:{value:new THREE.Color()},uOp:{value:1}};
+const mat=new THREE.ShaderMaterial({uniforms:U,transparent:true,depthWrite:false,blending:THREE.AdditiveBlending,
+vertexShader:`uniform float uTime,uSize,uPixel,uAsp;uniform vec2 uMouse;attribute float aSeed;varying float vS;
+void main(){vS=aSeed;vec3 p=position+vec3(sin(uTime*.6+aSeed*20.),cos(uTime*.5+aSeed*31.),sin(uTime*.4+aSeed*13.))*.035;
+vec4 mv=modelViewMatrix*vec4(p,1.);vec4 cl=projectionMatrix*mv;vec2 n=cl.xy/cl.w;vec2 d=n-uMouse;d.x*=uAsp;
+float m=smoothstep(.32,0.,length(d));vec2 pu=normalize(d+vec2(1e-4))*m*.14;pu.x/=uAsp;cl.xy+=pu*cl.w;
+gl_Position=cl;gl_PointSize=uSize*uPixel*(7./-mv.z);}`,
+fragmentShader:`uniform vec3 uC1,uC2;uniform float uOp;varying float vS;
+void main(){float r=length(gl_PointCoord-.5);if(r>.5)discard;gl_FragColor=vec4(mix(uC1,uC2,vS),smoothstep(.5,0.,r)*uOp);}`});
+const scene=new THREE.Scene(),cam=new THREE.PerspectiveCamera(50,1,.1,50);cam.position.z=7;
+const grp=new THREE.Group();grp.add(new THREE.Points(geo,mat));scene.add(grp);
+function size(){const w=innerWidth,h=innerHeight,dpr=Math.min(devicePixelRatio,2);renderer.setPixelRatio(dpr);renderer.setSize(w,h,false);cam.aspect=w/h;cam.updateProjectionMatrix();U.uPixel.value=dpr;U.uAsp.value=w/h}
+let cs=[];function meas(){cs=secs.map(s=>s.offsetTop+s.offsetHeight/2)}
+size();meas();addEventListener("resize",()=>{size();meas()});addEventListener("load",meas);
+const mt=new THREE.Vector2(9,9);addEventListener("pointermove",e=>{mt.set(e.clientX/innerWidth*2-1,-(e.clientY/innerHeight*2-1))});addEventListener("pointerleave",()=>mt.set(9,9));
+const ci=document.getElementById("ci"),cl=document.getElementById("cl");
+let cur=0,last=-1,tm=0,prev=performance.now();
+const lr=(a,b,t)=>a+(b-a)*t;
+function frame(now){requestAnimationFrame(frame);const dt=Math.min((now-prev)/1000,.05);prev=now;if(!reduce)tm+=dt;U.uTime.value=tm;
+const y=scrollY+innerHeight/2;let k=0;while(k<S-1&&y>=cs[k+1])k++;
+const tgt=k>=S-1?S-1:k+Math.min(Math.max((y-cs[k])/(cs[k+1]-cs[k]),0),1);
+cur+=(tgt-cur)*(reduce?1:.09);
+if(Math.abs(cur-last)>1e-4){last=cur;const x=Math.min(Math.max(cur,0),S-1.0001),a=Math.floor(x),f=x-a,A=shapes[a],B=shapes[a+1];
+for(let i=0;i<N;i++){let t=Math.min(Math.max(f*1.6-delay[i]*.6,0),1);t=t*t*(3-2*t);const j=i*3;pos[j]=A[j]+(B[j]-A[j])*t;pos[j+1]=A[j+1]+(B[j+1]-A[j+1])*t;pos[j+2]=A[j+2]+(B[j+2]-A[j+2])*t}
+pa.needsUpdate=true;U.uC1.value.copy(pal[a][0]).lerp(pal[a+1][0],f);U.uC2.value.copy(pal[a][1]).lerp(pal[a+1][1],f);
+U.uOp.value=lr(alp[a],alp[a+1],f);grp.position.x=lr(side[a],side[a+1],f);
+const r=Math.round(cur);ci.textContent=String(r+1).padStart(2,"0");cl.textContent=secs[r].dataset.l}
+U.uMouse.value.lerp(mt,.2);
+if(!reduce)grp.rotation.y+=dt*.12;grp.rotation.x=lr(grp.rotation.x,mt.x>5?0:-mt.y*.12,.05);
+renderer.render(scene,cam)}
+requestAnimationFrame(frame);
+}else{document.body.style.background="radial-gradient(circle at 70% 30%,#16233a,#07090d 60%)"}
+</script>
 </body>
 </html>
+
